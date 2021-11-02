@@ -1,0 +1,331 @@
+{
+  "Uuid": "cc6c3053-84ae-4468-9f49-5c2be6d1d031",
+  "IsCustomNode": false,
+  "Description": null,
+  "Name": "Цвет дверей ",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "DSRevitNodesUI.Categories, DSRevitNodesUI",
+      "SelectedIndex": 598,
+      "SelectedString": "OST_Walls",
+      "NodeType": "ExtensionNode",
+      "Id": "c863dc6fec574d8ea52c387abf736e60",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "ab9ec2e77d064439b6a12d2d4bea0335",
+          "Name": "Category",
+          "Description": "Выбранная категория.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Все предопределенные категории."
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "0fcb29b38fe7465dbbfd33b55868e050",
+      "Inputs": [
+        {
+          "Id": "0f2fdeadb78549f080dd670d7c810885",
+          "Name": "",
+          "Description": "Узел для оценки.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "fef1809e6421407d96a2734b61e0110d",
+          "Name": "",
+          "Description": "Просмотр содержимого.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Визуализация входного элемента узла."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.Element.SetParameterByName@string,var",
+      "Id": "1d8001eb570b4566aab9b010358aaea2",
+      "Inputs": [
+        {
+          "Id": "1e92274ad3e24fae8eeba99fcec8f7a4",
+          "Name": "element",
+          "Description": "Revit.Elements.Element",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "51e8904473474828872890b43b811254",
+          "Name": "parameterName",
+          "Description": "Имя задаваемого параметра.\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "ddd3782c514a4d5c94aaaf17aacaf7a8",
+          "Name": "value",
+          "Description": "Значение.\n\nvar",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "380139d0255849d6a12033e53d628a2f",
+          "Name": "Element",
+          "Description": "Element",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Задание параметров для одного из элементов.\n\nElement.SetParameterByName (parameterName: string, value: var): Element"
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.ElementsOfCategory, DSRevitNodesUI",
+      "NodeType": "ExtensionNode",
+      "Id": "6c2148b91ef64f8ab7ec29de7b0974ad",
+      "Inputs": [
+        {
+          "Id": "918f7d1b66a14157ada4b9d1c5d5f472",
+          "Name": "Category",
+          "Description": "Категория",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "7936551697e5401eaa2dfe93bed2e147",
+          "Name": "Elements",
+          "Description": "Тип элемента.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Получение из модели всех элементов определенной категории."
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.StringInput, CoreNodeModels",
+      "NodeType": "StringInputNode",
+      "InputValue": "тестовый комментарий",
+      "Id": "2d8c365c83cb4e81b06201f8110f4c2c",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "1020466c640a4dc4bdde7affa9b1dfc3",
+          "Name": "",
+          "Description": "String",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Создание строки."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "\"Комментарии\";",
+      "Id": "7aec7593b1be4997ac9e9216acee8bf5",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "65ac298176394d30bdcdf6964983ffd5",
+          "Name": "",
+          "Description": "Значение выражения в строке 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Обеспечивает возможность непосредственного авторства кода DesignScript"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "ab9ec2e77d064439b6a12d2d4bea0335",
+      "End": "918f7d1b66a14157ada4b9d1c5d5f472",
+      "Id": "fd780d744e804ac8bacbc660e97e200d"
+    },
+    {
+      "Start": "380139d0255849d6a12033e53d628a2f",
+      "End": "0f2fdeadb78549f080dd670d7c810885",
+      "Id": "113d0820fb704ad0b0050a8b76c874cb"
+    },
+    {
+      "Start": "7936551697e5401eaa2dfe93bed2e147",
+      "End": "1e92274ad3e24fae8eeba99fcec8f7a4",
+      "Id": "b37d46b68a2f48989f92fdcd1a717745"
+    },
+    {
+      "Start": "1020466c640a4dc4bdde7affa9b1dfc3",
+      "End": "ddd3782c514a4d5c94aaaf17aacaf7a8",
+      "Id": "72c38e42e75e4ffa8e513e0b5abb8f5a"
+    },
+    {
+      "Start": "65ac298176394d30bdcdf6964983ffd5",
+      "End": "51e8904473474828872890b43b811254",
+      "Id": "3fffbf3b626a4681b6229a23fd8e82bd"
+    }
+  ],
+  "Dependencies": [],
+  "NodeLibraryDependencies": [],
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.10.1.3976",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Фоновый просмотр",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": true,
+        "Name": "Categories",
+        "Id": "c863dc6fec574d8ea52c387abf736e60",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 43.674522734931713,
+        "Y": 145.30677366122779
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Watch",
+        "Id": "0fcb29b38fe7465dbbfd33b55868e050",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1594.3554735931177,
+        "Y": 136.33289730222813
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Element.SetParameterByName",
+        "Id": "1d8001eb570b4566aab9b010358aaea2",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 620.40343235844421,
+        "Y": 166.58217953176097
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "All Elements of Category",
+        "Id": "6c2148b91ef64f8ab7ec29de7b0974ad",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 363.59050362345613,
+        "Y": 149.34537428125614
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "String",
+        "Id": "2d8c365c83cb4e81b06201f8110f4c2c",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 169.6755511597861,
+        "Y": 328.88210319940305
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "7aec7593b1be4997ac9e9216acee8bf5",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 157.52756632152995,
+        "Y": 241.29578102857619
+      }
+    ],
+    "Annotations": [
+      {
+        "Id": "7fdbf1eb120b45dcbbbc7d198911c3db",
+        "Title": "Входные данные",
+        "Nodes": [
+          "c863dc6fec574d8ea52c387abf736e60"
+        ],
+        "Left": 33.674522734931713,
+        "Top": 48.906773661227788,
+        "Width": 186.4,
+        "Height": 189.0,
+        "FontSize": 36.0,
+        "InitialTop": 145.30677366122779,
+        "InitialHeight": 258.05864757121907,
+        "TextblockHeight": 86.4,
+        "Background": "#FFFFAA45"
+      },
+      {
+        "Id": "d77a0bc216734346b50ec10876ce04fe",
+        "Title": "Результат",
+        "Nodes": [
+          "0fcb29b38fe7465dbbfd33b55868e050"
+        ],
+        "Left": 1584.3554735931177,
+        "Top": 83.13289730222813,
+        "Width": 184.79999999999995,
+        "Height": 311.4,
+        "FontSize": 36.0,
+        "InitialTop": 136.33289730222813,
+        "InitialHeight": 145.0,
+        "TextblockHeight": 43.2,
+        "Background": "#FF48B9FF"
+      }
+    ],
+    "X": 61.476172382337495,
+    "Y": -51.589069205045575,
+    "Zoom": 1.0461651675930599
+  }
+}
